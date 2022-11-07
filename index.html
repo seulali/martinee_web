@@ -141,17 +141,17 @@
 
 
 
-        // function sendpush(){
+        function sendpush(){
 
-        //     $.ajax({
-        //         url:`https://sdk.iad-05.braze.com/messages/send`,
-        //         data:{  "segment_id": "segment_identifier"},
-        //         type:"POST",
-        //         success: function(json){
-        //             console.log(json)
-        //         }
-        //     })
-        // }
+            $.ajax({
+                url:`https://sdk.iad-05.braze.com/messages/send`,
+                data:{  "segment_id": "segment_identifier"},
+                type:"POST",
+                success: function(json){
+                    console.log(json)
+                }
+            })
+        }
 
     </script>
 
