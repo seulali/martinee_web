@@ -32,11 +32,9 @@
     <div class="container">
         <div class="jumbotron" id="jumbotron">
             <h1 class="display-4" id="display-4">&#128150 마티니 샘플 웹사이트에 오신 걸 환영합니다 &#128150</h1>
-            <p class="lead" id="lead">Braze API 연동 프로젝트입니다</p>
+            <p class="lead" id="lead">Braze SDK 연동 샘플웹입니다</p>
             <hr class="my-4">
-            <p></p>
-            <a class="btn btn-warning btn-lg calltoapi" id="btn-warning" href="#" role="button"
-                onclick="sendpush()">Brza API 호출하는 버튼</a>
+            <a class="btn btn-warning btn-lg calltoapi" id="btn-warning" href="#" role="button">클릭 이벤트</a>
         </div>
         <!-- 카드 레이아웃 -->
         <div class="row row-cols-1 row-cols-md-3" id="movie-list">
@@ -138,37 +136,6 @@
             })
 
             $('#review-modal').modal('show') // jquery
-        }
-
-        const api_key = "5f2aae0e6-a55f-42ab-8174-d1f752ecdd43"
-
-        function sendpush() {
-            $.ajax({
-                url: `https://rest.iad-05.braze.com/messages/send`,
-                type: "POST",
-                data: JSON.stringify({
-                    "broadcast" : true,
-                    "segment_id" : "c6df9cf0-dc43-4c48-a94e-e091f3556f1b",
-                    "campaign_id" : "7c5e2595-9ad4-40db-82a4-bcc82b658c66",
-                    "messages" : {
-                        "apple_push" : {
-                            "message_variation_id" : "iosPush-1030",
-                            "alert" : {
-                                "body" : "안녕하세요",
-                                "title" : "안녕하세요2"
-                            }
-                        }
-                    }
-                }),
-                Headers: {
-                    "Authorization": "Bearer ${api_key}}",
-                    "contentType": "application/json"
-                },
-                success: function (json) {
-                    console.log(json)
-                }
-            })
-
         }
 
     </script>
