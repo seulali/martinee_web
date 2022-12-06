@@ -20,6 +20,7 @@
         integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
         crossorigin="anonymous"></script>
 
+       
     <!-- 상단 헤더 바 -->
     <nav class="navbar navbar-dark bg-dark">
         <a class="navbar-brand" href="#">
@@ -34,8 +35,16 @@
             <h1 class="display-4" id="display-4">&#128150 마티니 샘플 웹사이트에 오신 걸 환영합니다 &#128150</h1>
             <p class="lead" id="lead">Braze SDK 연동 샘플웹입니다</p>
             <hr class="my-4">
-            <a class="btn btn-warning btn-lg calltoapi" id="btn-warning" href="#" role="button">클릭 이벤트</a>
+            <a class="btn btn-warning btn-lg calltoapi" id="clickbtn" href="#" role="button">클릭 이벤트</a>
+        
+    
         </div>
+        <script>
+            document.getElementById("clickbtn").onclick = function () {
+              alert("Braze에 클릭 이벤트가 전송되었습니다");
+            };
+          </script>
+   
         <!-- 카드 레이아웃 -->
         <div class="row row-cols-1 row-cols-md-3" id="movie-list">
             <div class="col mb-4">
