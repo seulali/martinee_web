@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Martinee</title>
     <link rel="stylesheet" href="index.css" />
-    <link href="amplitude.js" />
     <script type="text/javascript">
         (function (e, t) {
             var n = e.amplitude || { _q: [], _iq: {} }; var r = t.createElement("script")
@@ -49,8 +48,11 @@
                         } return n._iq[e]
                 }; e.amplitude = n
         })(window, document);
+    </script>
+    <script>
         var userId = "molly";
-        amplitude.getInstance().init("2d45e9d9ac9ee26cbd38f9df620467aa", userId, {includeReferrer: true, includeUtm: true}, function(){ alert('초기화 완료'); });
+        amplitude.getInstance().init("2d45e9d9ac9ee26cbd38f9df620467aa", userId, {includeUtm: true, includeReferrer: true},
+        function(){ alert('초기화 완료'); });
     </script>
     <script>
         new amplitude.Identify(); // does nothing, must call one of the following methods and pass to client
